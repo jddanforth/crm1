@@ -1,0 +1,15 @@
+<!doctype html>
+<title>CRM</title>
+<h1>Contacts</h1>
+<ul>
+{% for c in contacts %}
+  <li>{{ c.name }} - {{ c.email }} - {{ c.notes }}</li>
+{% endfor %}
+</ul>
+<h2>Add Contact</h2>
+<form method="post" action="/add">
+  Name: <input type="text" name="name" />
+  Email: <input type="email" name="email" />
+  Notes: <input type="text" name="notes" />
+  <input type="submit" value="Add" />
+</form>
